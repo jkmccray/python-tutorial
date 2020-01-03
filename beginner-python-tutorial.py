@@ -183,6 +183,7 @@ for name, age, favfood in people:
 s = {'blueberry', 'raspberry'}
 s.add('strawberry')
 s.add(4)
+# The add method will only add the element to the set if it does not already exist in the set
 # Will print in a random order
 print(s)
 
@@ -193,4 +194,61 @@ no_duplicates_set = set(nums_list)
 print(no_duplicates_set)
 no_duplicates_list = list(no_duplicates_set)
 print(no_duplicates_list)
+
+# Methods: Union, Intersection, Difference
+library1 = {'Harry Potter', 'Hunger Games', 'Lord of the Rings'}
+library2 = {'Harry Potter', 'Romeo and Juliet'}
+
+all_books_in_town = library1.union(library2)
+print(all_books_in_town)
+
+books_at_both_libraries = library1.intersection(library2)
+print(books_at_both_libraries)
+
+diff1 = library1.difference(library2)
+print(diff1)
+diff2 = library2.difference(library1)
+print(diff2)
+
+# .clear() will clear out the set and make it empty
+
+# ====== Dictionaries ======
+# Do not have an order
+groceries = {
+  'bananas': 5,
+  'oranges':3
+}
+print(groceries['bananas']) # will throw an error if not in the dictionary
+print(groceries.get('bananas')) # will return 'none' if not in the dictionary
+
+contacts = {
+  'Joe': '123-4567',
+  'Jane': '987-6543'
+}
+print(contacts['Joe'])
+
+sentence = 'Kiwi is the cutest cat in the world'
+word_counts = {
+  'kiwi': 1,
+  'the': 2,
+  'cat': 1
+}
+# change the value of 'the'
+word_counts['the'] += 1
+print(word_counts)
+
+# Methods:
+# dict.items() returns a list of tuples. Each tuple is a key-value pair
+print(word_counts.items())
+# dict.keys() returns a list of keys
+print(word_counts.keys())
+# dict.values() returns a list of values
+print(word_counts.values())
+# Delete an item from the dictionary using .pop() with its key
+word_counts.pop('cat')
+print(word_counts)
+# Add an item to the dictionary
+word_counts['kitty'] = 1
+print(word_counts)
+# Clear out the dictionary with dict.clear()
 
