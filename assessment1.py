@@ -77,6 +77,9 @@ print(d['k1']['k2'])
 d = {'k1':[{'nest_key':['this is deep',['hello']]}]}
 print(d['k1'][0]['nest_key'][1][0])
 
+d = {'k1':[1,2,{'k2':['this is tricky',{'tough':[1,2,['hello']]}]}]}
+print(d['k1'][2]['k2'][1]['tough'][2][0])
+
 # Can you sort a dictionary? Why or why not?
 # No because it does not have a specified order
 
