@@ -69,3 +69,28 @@ print(new_list)
 num_list.reverse()
 print(num_list)
 
+# ====== Dictionaries ======
+my_dict = {
+  'key1': 'value1',
+  'key2': 'value2'
+  }
+print(my_dict['key1'])
+
+prices_lookup = {
+  'apple': 2.99,
+  'orange': 1.99,
+  'milk': 5.80
+}
+print(prices_lookup['apple'])
+
+# can nest lists or dictonaries inside dictionaries and have different types
+
+# ====== Tuples ======
+# Tuples are similar to lists but are immutable
+t = (1,2,3,1)
+mylist = [1,2,3]
+print(t.count(1))
+mytuple = ('a', 'a', 'b', 'c')
+# mytuple[0] = 'bbb' will throw an error
+print(mytuple)
+# built-in methods: t.count() and t.index()
