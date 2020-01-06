@@ -94,3 +94,94 @@ mytuple = ('a', 'a', 'b', 'c')
 # mytuple[0] = 'bbb' will throw an error
 print(mytuple)
 # built-in methods: t.count() and t.index()
+
+# ====== Sets ======
+# unordered collections of unique elements
+
+list5 = [1,2,2,33,4,4,11,22,3,3,2]
+print(list(set(list5)))
+
+# ====== If/Elif/Else Statements ======
+hungry = True
+if hungry:
+  print('FEED ME!')
+else:
+  print("I'm full")
+
+loc = 'Bank'
+if loc == 'Auto Shop':
+  print('Cars are cool')
+elif loc == 'Bank':
+  print('Money is kewl')
+else:
+  print("I'm at the store")
+
+# ====== For Loops ======
+mylist = [1,2,3,4,5,6,7,8,9,10]
+
+for num in mylist:
+  print(num)
+
+for num in mylist:
+  # Check for even
+  if num % 2 == 0:
+    print(num)
+  else:
+    print(f'odd number: {num}')
+
+list_sum = 0
+for num in mylist:
+  list_sum += num
+print(list_sum)
+
+for letter in 'hello world':
+  print(letter)
+
+tup = (1,2,3)
+for item in tup:
+  print(item)
+
+# Tuple unpacking
+mylist = [(1,2), (3,4), (5,6), (7,8)]
+print(len(mylist))
+for a,b in mylist:
+  print(a)
+
+mylist = [(1,2,3), (4,5,6), (7,8,9), (10,11,12)]
+for a,b,c in mylist:
+  print(b)
+
+# iterate through a dictionary
+d = {
+  'k1': 1,
+  'k2': 2,
+  'k3': 3
+}
+print(d.items())
+for key,value in d.items():
+  print(value)
+
+# ====== While Loops ======
+x = 0
+while x < 5:
+  print(f'The current value of x is {x}')
+  x += 1
+
+# Break, continue, and pass
+x = [1,2,3]
+for item in x:
+  pass
+print('end of my script')
+
+mystring = 'Sammy'
+for letter in mystring:
+  if letter == 'a':
+    continue
+  print(letter)
+
+mystring = 'Tammy'
+for letter in mystring:
+  if letter == 'a':
+    break
+  print(letter)
+
